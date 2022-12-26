@@ -17,8 +17,10 @@
       
       - name: "login docker hub"
         run: docker login --username ${{ secrets.DOCKER_USRNAME }} --password ${{ secrets.DOCKER_TOKEN }}
+      
       - name: "Building docker image"
         run: docker build -t ${{ secrets.DOCKER_USRNAME }}/myimage .
+      
       - name: "pushing to docker hub"
         run: docker push ${{ secrets.DOCKER_USRNAME }}/myimage 
         
