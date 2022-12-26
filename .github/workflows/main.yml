@@ -12,11 +12,10 @@
 
 
     steps:
-      - name: 'Testing Github action'
-        run: pwd
-      - name: 'Testing Printing'
-        run: echo Ahmed
-
+      - name: 'printing folder contents'
+        run: ls
+      
+      
 
 
 
