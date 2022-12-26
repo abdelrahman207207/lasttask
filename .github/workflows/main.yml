@@ -12,14 +12,12 @@
 
 
     steps:
-      - name: 'printing folder contents before'
-        run: ls
-
+     
       - uses: actions/checkout@v3 
       
-      - name: 'printing folder contents after'
-        run: ls
-
+      - name: "login docker hub"
+        run: docker login --username ${{ sectets.DOCKER_USRNAME }} --password ${{ sectets.DOCKER_TOKEN }}
+        
 
 
 
